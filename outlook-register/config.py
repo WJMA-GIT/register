@@ -16,7 +16,7 @@ class Settings:
     proxy: Optional[str] = None
     bot_protection_wait: float = 12.0
     max_captcha_retries: int = 2
-    concurrent_flows: int = 5
+    concurrent_flows: int = 1
     max_tasks: int = 50
     enable_oauth2: bool = False
     client_id: str = ""
@@ -47,7 +47,7 @@ class Settings:
             proxy=data.get("proxy") or None,
             bot_protection_wait=float(data.get("Bot_protection_wait", data.get("bot_protection_wait", 12.0))),
             max_captcha_retries=int(data.get("max_captcha_retries", 2)),
-            concurrent_flows=int(data.get("concurrent_flows", 5)),
+            concurrent_flows=int(data.get("concurrent_flows", 1)),
             max_tasks=int(data.get("max_tasks", 50)),
             enable_oauth2=bool(data.get("enable_oauth2", False)),
             client_id=data.get("client_id", ""),

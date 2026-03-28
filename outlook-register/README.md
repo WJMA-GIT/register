@@ -22,7 +22,7 @@ uv run playwright install chromium
 ```json
 {
   "proxy": "http://127.0.0.1:7890",
-  "concurrent_flows": 5,
+  "concurrent_flows": 1,
   "max_tasks": 50,
   "headless": false,
   "results_dir": "accounts",
@@ -51,7 +51,7 @@ uv run playwright install chromium
 - `proxy`：代理地址，例如 `http://127.0.0.1:7890`
 - `bot_protection_wait`：防机器人等待时间（秒），默认 `12.0`
 - `max_captcha_retries`：验证码最大重试次数，默认 `2`
-- `concurrent_flows`：并发数，默认 `5`
+- `concurrent_flows`：并发数，默认 `1`
 - `max_tasks`：总任务数，默认 `50`
 - `enable_oauth2`：是否启用 OAuth2 token 获取，默认 `false`
 - `client_id`：OAuth2 应用 `client_id`
